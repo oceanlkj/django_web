@@ -1,4 +1,22 @@
 <html>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <head>
+        <title>Django TEST Blog</title>
+    </head>
+
+    <body>
+	<div>
+		<h1><a href=""> Dango Blog Web Man Page </a></h1>
+	</div>
+	
+	{% for post in posts %}
+
+ 	   <div>
+    	      <p> published: {{ post.created_date }} </p>
+	      <h3><a href="">{{ post.title }}</a></h3>
+              <p>{{ post.text|linebreaksbr }}</p>
+ 	   </div>
+
+	{% endfor %}
+
+    </body>
 </html>
